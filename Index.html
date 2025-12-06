@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenSense – Smarter Farming Insights</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HERO HEADER -->
+  <header class="gs-hero">
+    <img src="GreenSense1.png" alt="GreenSense Logo" class="gs-logo">
+    <p class="gs-tagline">Smart Insights for Small Greenhouse Farmers</p>
+    <button class="gs-btn gs-primary-btn">Get Started</button>
+  </header>
+
+  <!-- FEATURES GRID -->
+  <section class="gs-features">
+    <div class="gs-feature-item">📊 Transaction Tracking</div>
+    <div class="gs-feature-item">🤖 AI Insights</div>
+    <div class="gs-feature-item">🔔 Alerts & Suggestions</div>
+    <div class="gs-feature-item">📑 Easy Reports</div>
+  </section>
+
+  <!-- VISUAL PREVIEW -->
+  <section class="gs-visual">
+    <img src="your-image.jpg" alt="GreenSense Dashboard" class="gs-preview">
+  </section>
+
+  <!-- CAROUSEL SECTION -->
+  <section class="gs-carousel-section">
+    <div class="gs-carousel">
+      <button class="gs-arrow left" onclick="prevSlide()">&#10094;</button>
+
+      <div class="gs-carousel-box" id="slide">
+        <h2>What Is GreenSense?</h2>
+        <p>
+          GreenSense is a smart platform designed to help small greenhouse farmers turn everyday transactions into
+          valuable insights. It analyzes sales and expenses to show which crops are most profitable, reduce waste,
+          and guide smarter planting and spending decisions.
+        </p>
+      </div>
+
+      <button class="gs-arrow right" onclick="nextSlide()">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="gs-cta-final">
+    <button class="gs-btn gs-primary-btn">Sign Up Now</button>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="gs-footer">
+    <div class="gs-contact">
+      <h3>Contact Us</h3>
+      <p>Facebook: BataycanGreenSense</p>
+      <p>Instagram: BataycanGreenSense</p>
+    </div>
+    <p>© 2025 GreenSense. All rights reserved.</p>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    const slides = [
+      {
+        title: "What Is GreenSense?",
+        text: "GreenSense is a smart platform designed to help small greenhouse farmers turn everyday transactions into valuable insights. It analyzes sales and expenses to know which crops are most profitable, reduce waste, and guide smart planting and pricing decisions."
+      },
+      {
+        title: "Why Farmers Need GreenSense",
+        text: "Greenhouse farmers face financial blind spots, wasted produce, cash flow challenges, and planting difficulties. GreenSense helps solve these with data-driven insights."
+      },
+      {
+        title: "Benefits of Using GreenSense",
+        text: "Save money, reduce waste, increase profits, plan better, and gain peace of mind with GreenSense."
+      },
+      {
+        title: "Who Can Use GreenSense?",
+        text: "Perfect for small-scale greenhouse farmers, indoor farms, vertical farms, and direct-to-market growers."
+      },
+      {
+        title: "Why GreenSense is Different",
+        text: "Designed for small farms, focused on actionable insights, and powered by smart but simple AI."
+      },
+      {
+        title: "How Farmers Can Start",
+        text: "Sign up, log purchases and sales, let GreenSense analyze your data, and receive smart advice."
+      },
+      {
+        title: "The Future with GreenSense",
+        text: "GreenSense will expand with IoT integration, crop demand forecasting, and personalized planting recommendations."
+      }
+    ];
+
+    let currentSlide = 0;
+
+    function updateSlide() {
+      const slide = document.getElementById("slide");
+      slide.innerHTML = `
+        <h2>${slides[currentSlide].title}</h2>
+        <p>${slides[currentSlide].text}</p>
+      `;
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      updateSlide();
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      updateSlide();
+    }
+  </script>
+
+</body>
+</html>
